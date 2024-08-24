@@ -1,0 +1,29 @@
+[
+  {
+    "ip": "146.185.210.49",
+    "port": 443,
+    "protocol": "https",
+    "url": "https://146.185.210.49",
+    "vendor": "wordpress",
+    "product": "wordpress",
+    "vuln": "CVE-2024-5932"
+  },
+  {
+    "ip": "193.200.75.36",
+    "port": 443,
+    "protocol": "https",
+    "url": "https://193.200.75.36",
+    "vendor": "wordpress",
+    "product": "wordpress",
+    "vuln": "CVE-2024-5932"
+  },
+  {
+    "ip": "77.222.62.39",
+    "port": 443,
+    "protocol": "https",
+    "url": "https://3liner.org",
+    "vendor": "wordpress",
+    "product": "wordpress",
+    "vuln": "CVE-2024-5932"
+  }
+]
