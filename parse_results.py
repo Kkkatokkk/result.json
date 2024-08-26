@@ -14,8 +14,23 @@ def run_tlsx(url):
         print(f"Decoding error JSON for {url}: {e}")
     return None
 
+def run_subfinder(domain):
+
+    command = ['subfinder', '-d', domain, '-silent', '-json']
+    try:
+        result = subprocess.run(command, capture_output=True, text=True, check=True)
+        fqdns = [json.loads(line)['host'] for line in result.stdout.splitlines()]
+        return fqdns
+    except subprocess.CalledProcessError as e:
+        print(f"Error executing subfinder for {domain}: {e}")
+        return []
+    except json.JSONDecodeError as e:
+        print(f"Decoding JSON error for {domain}: {e}")
+        return []
+
 def extract_domain_level_2(hostname):
-     
+    if '=' in hostname:
+            hostname = hostname.split('=')[-1]
     if hostname:
         parts = hostname.split('.')
         if len(parts) >= 2:
@@ -48,8 +63,12 @@ def main():
         print(f"Processing URL: {url}")
         tlsx_data = run_tlsx(url)
         domains = parse_tlsx_results(tlsx_data)
-        print(f"Second-level domains: {domains}")
+        print(f"Second-level domain: {domains}")
+        fqdns = set()
+        for domain in domains:
+            fqdns.update(run_subfinder(domain))
+        print(f"FQDN: {fqdns}")
+        
 
 if __name__ == "__main__":
     main()
-
