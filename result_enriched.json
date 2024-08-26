@@ -1,0 +1,48 @@
+[
+    {
+        "ip": "146.185.210.49",
+        "port": 443,
+        "protocol": "https",
+        "url": "https://146.185.210.49",
+        "vendor": "wordpress",
+        "product": "wordpress",
+        "vuln": "CVE-2024-5932",
+        "domains": [
+            "memorialbn.ru"
+        ],
+        "fqdns": [
+            "www.memorialbn.ru"
+        ]
+    },
+    {
+        "ip": "193.200.75.36",
+        "port": 443,
+        "protocol": "https",
+        "url": "https://193.200.75.36",
+        "vendor": "wordpress",
+        "product": "wordpress",
+        "vuln": "CVE-2024-5932",
+        "domains": [
+            "kulkot.ru"
+        ],
+        "fqdns": [
+            "www.kulkot.ru"
+        ]
+    },
+    {
+        "ip": "77.222.62.39",
+        "port": 443,
+        "protocol": "https",
+        "url": "https://3liner.org",
+        "vendor": "wordpress",
+        "product": "wordpress",
+        "vuln": "CVE-2024-5932",
+        "domains": [
+            "3liner.org"
+        ],
+        "fqdns": [
+            "www.3liner.org",
+            "3liner.org"
+        ]
+    }
+]
